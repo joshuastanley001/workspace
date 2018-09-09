@@ -31,8 +31,17 @@ Clone this repo to your local development workstation.
 # git status
 # git branch
 ```
+Next you should run `npm install` to install all 3rd party dependencies.  `npm install` reads the package.json in the project's root directory and downloads adn installs all packages mentioned in the 'dependencies' and 'devDependcies' sections.  (Dependencies are packages needed for the code to run in production while Dev Dependencies are packages needed to compile, build, test, and deploy the code but are otherwise not needed for the code to run in production.)
+```
+# npm install
+```
+Look at the console output. If you see any errors, you need to resolve them before proceeding.  If all package depencies were installed successfully, you can do a test build.
+```
+# ng build --prod
+```
 
-By default, your local git repo will be on the master branch.  However, you should not work on the master branch directly, so you need to create your own development branch to work off of.
+By default, your local git repo will be a clone of the master branch.  However, you should not work on the master branch directly, so you need to create your own development branch to work off of.
+
 But first, let's setup Webstorm.
 
 1. Run webstorm. 
