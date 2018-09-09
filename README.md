@@ -31,14 +31,15 @@ Clone this repo to your local development workstation.
 # git status
 # git branch
 ```
-Next you should run `npm install` to install all 3rd party dependencies.  `npm install` reads the package.json in the project's root directory and downloads adn installs all packages mentioned in the 'dependencies' and 'devDependcies' sections.  (Dependencies are packages needed for the code to run in production while Dev Dependencies are packages needed to compile, build, test, and deploy the code but are otherwise not needed for the code to run in production.)
+Next you should run `npm install` to install all 3rd party dependencies.  `npm install` reads the package.json in the project's root directory and downloads and installs all packages mentioned in the 'dependencies' and 'devDependcies' sections.  (Dependencies are packages needed for the code to run in production while Dev Dependencies are packages needed to compile, build, test, and/or deploy the code but are otherwise not needed for the code to run in production.)
 ```
 # npm install
 ```
-Look at the console output. If you see any errors, you need to resolve them before proceeding.  If all package depencies were installed successfully, you can do a test build.
+Look at the console output. If you see any errors, you need to resolve them before proceeding.  If all package dependencies were installed successfully, you can do a test build.
 ```
 # ng build --prod
 ```
+The `ng build --prod` compiles and then packages the production files and places them in the dist directory.  The webapp is now ready to run. You can run `ng serve --prod` to run the webapp.  (See section down below for more details.)  For now, we will continue setting up the development environment.
 
 By default, your local git repo will be a clone of the master branch.  However, you should not work on the master branch directly, so you need to create your own development branch to work off of.
 
@@ -56,17 +57,18 @@ Now back in webstorm,
 
 ##  Development workflow to make code changes
 
-1. Edit files in webstorm (or other editor).
+0. The following assumes you have webstorm setup and have a local git repo yourname-dev where you will be editing the code.
+1. Edit the code in webstorm. You can edit existing files or add new files for whatever feature you are working on.
 2. In Webstorm, take a look at the VCS panel at the bottom. (If you don't see this, you haven't setup GitHub/Git settings.)
-3. Look at ChangeList. If you modify any files under VCS/Git control, they will show up here as modified.  There is also another folder for unversioned files.  If you add a new file, Webstorm will prompt you whether you want to add it to version control. You should say Yes. If you add files outside Webstorm, e.g. with some other editor on the cmdline, then the files will show up as unversioned. You can right-click on the files and say Add to Version Control.
-4. Once you are ready to checking some code changes, Git->Commit Files will commit the changes to the local myname-dev branch. You will be prompted to enter a description of the code changes.
-5. Git->Push will push the changes form the local myname-dev branch to the corresponding remote (origin) myname-dev branch on GitHub.
-6. In GitHub, navigate to ecard-webapp home page, and there should be a banner message saying you recently commited changes to myname-dev branch, and you can click to Create PR to push code from Dev branch to master branch.
-7. On the Create PR screen, you should add description/commments explaining what the change is.  By default, the description from the commit will be used the PR description, but you can add additional description.  In the case where you are creating a PR for multiple commits at once, you may have to manually merge the descriptions from each commit, because GitHub only copies the last commit's description.  
-8.  In the description, you can also mention fellow committers e.g. @elebitzero if you want them to be notified of the PR.
-9. TBD - After creating the PR, any auomated tests or checks setup with GitHub plugins would be run.  (Right now, we don't have any configured.)
-10. TBD - Normally, you want to get at least one other committer to review your PR and then Approve it before you merge it to the master branch.
-8. Merge PR. This merges the commits from myname-dev branch to the master branch on GitHub.   
+3. Look at ChangeList. If you modify any files under VCS/Git control, they will show up here as modified.  There is also another folder for unversioned files.  If you add a new file, Webstorm will prompt you with a dialog asking "Do you want to add the following file to Git?". You should say Yes. If you accidentally say No, or if you added files outside Webstorm, then the files will show up as in the "Unversioned Files" changelist in the VCS panel. You can addd them to Git by right-clicking and selecting "Add to VCS" or press CTRL+ALT+A.  The files must be added to Git/VCS in order to check them into the GitHub repository.
+4. Once you are ready to check in some code changes, select Git->Commit Files to commit the changes to the local myname-dev branch. You will be prompted to enter a description of the code changes.
+5. Invoke Git->Push to push the changes form the local myname-dev branch to the corresponding remote (origin) myname-dev branch on GitHub.
+6. In GitHub, navigate to ecard-webapp home page, and there should be a banner message saying you recently commited changes to myname-dev branch, and you can click to Create PR (Pull Request) to push code from the myname-dev branch to the master branch.
+7. On the Create PR screen, you should edit the description explaining what the change is.  By default, the description from the commit will be used for the PR description, but you can add additional text if necessary.  In the case where you are creating a PR for multiple commits at once, you may have to manually merge the descriptions from each commit, because GitHub only copies the last commit's description.  
+8.  In the description, you can also mention fellow committers e.g. @elebitzero if you want them to be notified of this PR.
+9. TBD - After creating the PR, any automated tests would be run.  (Right now, we don't have any configured.)
+10. TBD - Normally, you want to get at least one other committer to review your PR and then approve it before you merge it to the master branch.
+11. Merge PR. This merges the commits from myname-dev branch to the master branch on GitHub.   
 
 ## Development workflow to keep your myname-dev branch updated.
 
