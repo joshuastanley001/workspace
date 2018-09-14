@@ -1,6 +1,11 @@
-# EcardWebapp
+# Digital Greeting Card Web App
 
 Digital Greeting Card web application.
+
+## Contributers
+
+CMPE 131 Group 9
+David Lefaive, Joshua Stanley, Kathaleen Trampe, Nicholas Yang
 
 ## Install Development Tools
 
