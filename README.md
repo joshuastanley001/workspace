@@ -2,9 +2,10 @@
 
 Digital Greeting Card web application.
 
-## Contributers
+## Contributors
 
 CMPE 131 Group 9
+
 David Lefaive, Joshua Stanley, Kathaleen Trampe, Nicholas Yang
 
 ## Install Development Tools
