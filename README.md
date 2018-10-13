@@ -6,7 +6,7 @@ Digital Greeting Card web application.
 
 CMPE 131 Group 9
 
-David Lefaive, Joshua Stanley, Kathaleen Trampe, Nicholas Yang
+David Lefaive (elebitzero), Joshua Stanley (joshuastanley001), Kathaleen Anita Trampe (Kathaleen), Nicholas Yang (nicholasoyang)
 
 ## Install Development Tools
 
