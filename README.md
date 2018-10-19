@@ -8,6 +8,17 @@ CMPE 131 Group 9
 
 David Lefaive (elebitzero), Joshua Stanley (joshuastanley001), Kathaleen Anita Trampe (Kathaleen), Nicholas Yang (nicholasoyang)
 
+## Technology Stack
+
+| Category | Technologies |
+| :--- | :--- |
+| Languages | [TypeScript](https://www.typescriptlang.org/) |
+| Platform Services | [Firebase](https://firebase.google.com/), [Firebase Functions](https://firebase.google.com/docs/functions/), [Firebase Storage](https://firebase.google.com/docs/storage/), [Twilio SMS API](https://www.twilio.com/docs/sms/api), [Google Mail API](https://developers.google.com/gmail/api/) |
+| User Interface |  [Angular](https://angular.io/), [Bootstrap](https://getbootstrap.com/) |
+| Build/Packaging | [Node](https://nodejs.org/), [npm](https://www.npmjs.com/), [angular-cli](https://cli.angular.io/), [firebase-tools](https://github.com/firebase/firebase-tools) |
+
+See [package.json](package.json) for a list of all package dependencies.
+
 ## Install Development Tools
 
 1. Install Java JRE(Webstorm uses this)
