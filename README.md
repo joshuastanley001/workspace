@@ -1,6 +1,6 @@
 # Digital Greeting Card Web App
 
-Digital Greeting Card web application.
+A digital greeting card web application that allows users to select an ecard from a card catalog, add a personal message, and then send it to one or more recipients via email or SMS.
 
 ## Contributors
 
