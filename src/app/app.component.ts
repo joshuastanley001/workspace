@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'CMPE-131';
+  readonly categories: string [] = ['Birthday', 'Christmas', 'Graduation', 'Thank you'];
 }

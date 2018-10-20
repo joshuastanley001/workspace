@@ -13,11 +13,7 @@
             Categories <span class="caret"></span>
           </button>
           <ul *dropdownMenu class="dropdown-menu" role="menu">
-            <li role="menuitem"><a class="dropdown-item" href="#">Birthday</a></li>
-            <li role="menuitem"><a class="dropdown-item" href="#">Christmas</a></li>
-            <li role="menuitem"><a class="dropdown-item" href="#">Graduation</a></li>
-            <li role="menuitem"><a class="dropdown-item" href="#">Thank you</a>
-            </li>
+            <li role="menuitem"><a class="dropdown-item" href="#" *ngFor="let category of categories">{{category}}</a></li>
           </ul>
         </li>
     </ul>
