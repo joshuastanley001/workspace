@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Category} from "../model/Category";
 
 @Component({
   selector: 'navbar',
@@ -7,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
-  readonly categories: string [] = ['All', 'Birthday', 'Christmas', 'Graduation', 'Thank you'];
+  readonly categories: Category [] = Category.categories;
 
   constructor() { }
 

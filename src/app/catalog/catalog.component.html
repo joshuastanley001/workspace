@@ -2,39 +2,19 @@
   <div class="row">
     <div class="col-sm-auto"></div>
     <div class="btn-group-vertical">
-      <button type="button" class="btn btn-secondary">All</button>
-      <button type="button" class="btn btn-secondary">Birthday</button>
-      <button type="button" class="btn btn-secondary">Christmas</button>
-      <button type="button" class="btn btn-secondary">Graduation</button>
-      <button type="button" class="btn btn-secondary">Thank You</button>
+      <button type="button" class="btn btn-secondary" *ngFor="let category of categories">{{category.title}}</button>
     </div>
     <div class="col">
       <div class="card-deck">
-        <div class="card mb-4">
+        <div class="card mb-4" *ngFor="let template of catalog">
           <div class="card-body">
-            <img class="card-thumbnail" src="/src/assets/images/thank-you-1.gif" width='133px' height='200px'
+            <img class="card-thumbnail" src="{{template.url}}" width='133px' height='200px'
                  alt="Card image cap">
-            <h5 class="card-title">Birthday Card #1</h5>
-            <p class="card-text">Birthday Card #1</p>
-          </div>
-        </div>
-        <div class="card mb-4">
-          <div class="card-body">
-            <img class="card-thumbnail" width='133px' height='200px' src="/src/assets/images/thank-you-1.gif"
-                 alt="Card image cap">
-            <h5 class="card-title">Birthday Card #2</h5>
-            <p class="card-text">Birthday Card #2</p>
-          </div>
-        </div>
-        <div class="card mb-4">
-          <div class="card-body">
-            <img class="card-thumbnail" width='133px' height='200px' src="/src/assets/images/thank-you-1.gif"
-                 alt="Card image cap">
-            <h5 class="card-title">Birthday Card #3</h5>
-            <p class="card-text">Birthday Card #3</p>
+            <h5 class="card-title">{{template.title}}</h5>
           </div>
         </div>
       </div>
     </div>
+  </div>
   </div>
 
