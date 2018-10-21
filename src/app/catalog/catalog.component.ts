@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
+import {CardTemplate} from "../model/CardTemplate";
+
 @Component({
   selector: 'catalog',
   templateUrl: './catalog.component.html',
@@ -7,6 +9,7 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class CatalogComponent implements OnInit {
 
+  catalog: CardTemplate[] = CardTemplate.catalog;
   constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
@@ -14,7 +17,8 @@ export class CatalogComponent implements OnInit {
       .subscribe(params => {
 
 
-      })
+      });
   }
 
 }
+

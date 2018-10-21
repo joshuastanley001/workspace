@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {CatalogComponent} from "./catalog/catalog.component";
-import {LandingComponent} from "./landing/landing.component";
+import {CatalogComponent} from './catalog/catalog.component';
+import {LandingComponent} from './landing/landing.component';
 
 const routes: Routes = [
   {
@@ -11,8 +11,7 @@ const routes: Routes = [
       {path: ':id', component: CatalogComponent}
     ]
   },
-  { path: '', component: LandingComponent},
-  { path: 'catalog', component: CatalogComponent}
+  { path: '', component: LandingComponent}
   ];
 
 @NgModule({
