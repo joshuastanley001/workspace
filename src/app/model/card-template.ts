@@ -9,7 +9,7 @@ export class CardTemplate {
       refUrl: 'https://s3.amazonaws.com/my-free-printable-cards.support-files.thank-you-cards/printable-thank-you-cards-00003-a5.pdf'
     },
     {
-      url: '/src/assets/images/thank-you-neon.gif',
+      url: '/src/assets/images/thank-you-neon.png',
       title: 'Neon Thank You',
       id: 'thank-you-neon',
       category: 'thankyou',
