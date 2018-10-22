@@ -5,7 +5,7 @@
       <button type="button" class="btn btn-secondary" *ngFor="let category of categories">{{category.title}}</button>
     </div>
     <div class="col">
-      <div class="card-deck">
+      <div class="row">
         <div class="card mb-4" *ngFor="let template of catalog">
           <div class="card-body">
             <img class="card-thumbnail" src="{{template.url}}" width='133px' height='200px'
