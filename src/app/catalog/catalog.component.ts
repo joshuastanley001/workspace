@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
-import {CardTemplate} from "../model/CardTemplate";
+import {CardTemplate} from '../model/card-template';
 
 @Component({
   selector: 'catalog',
