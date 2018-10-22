@@ -2,7 +2,7 @@
   <div class="row">
     <div class="col-sm-auto"></div>
     <div class="btn-group-vertical">
-      <button type="button" class="btn btn-secondary" *ngFor="let category of categories">{{category.title}}</button>
+      <button type="button" class="btn btn-secondary" routerLink="/catalog/{{category.id}}" *ngFor="let category of categories">{{category.title}}</button>
     </div>
     <div class="col">
       <div class="row">
