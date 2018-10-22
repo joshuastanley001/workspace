@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {ActivatedRoute} from '@angular/router';
 import {CardTemplate} from '../model/card-template';
+import {Category} from '../model/category';
 
 @Component({
   selector: 'catalog',
@@ -9,8 +10,10 @@ import {CardTemplate} from '../model/card-template';
 })
 export class CatalogComponent implements OnInit {
 
-  catalog: CardTemplate[] = CardTemplate.catalog;
-  constructor(private route: ActivatedRoute) { }
+  readonly categories: Category [] = Category.categories;
+  readonly catalog: CardTemplate[] = CardTemplate.catalog;
+  constructor(private route: ActivatedRoute) {
+  }
 
   ngOnInit() {
     this.route.paramMap
