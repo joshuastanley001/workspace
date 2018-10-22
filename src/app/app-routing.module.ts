@@ -8,7 +8,7 @@ const routes: Routes = [
     path: 'catalog',
     children: [
       {path: '', component: CatalogComponent},
-      {path: ':id', component: CatalogComponent}
+      {path: ':category', component: CatalogComponent}
     ]
   },
   { path: '', component: LandingComponent}

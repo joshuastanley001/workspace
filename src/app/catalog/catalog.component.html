@@ -6,15 +6,17 @@
     </div>
     <div class="col">
       <div class="row">
-        <div class="card mb-4" *ngFor="let template of catalog">
-          <div class="card-body">
-            <img class="card-thumbnail" src="{{template.url}}" width='133px' height='200px'
-                 alt="Card image cap">
-            <h5 class="card-title">{{template.title}}</h5>
+        <ng-container *ngFor="let template of catalog">
+          <div class="card mb-4" *ngIf="filterByCategory(template.category)">
+            <div class="card-body">
+              <img class="card-thumbnail" src="{{template.url}}" width='133px' height='200px'
+                   alt="Card image cap">
+              <h5 class="card-title">{{template.title}}</h5>
+            </div>
           </div>
-        </div>
+        </ng-container>
       </div>
     </div>
   </div>
-  </div>
+</div>
 

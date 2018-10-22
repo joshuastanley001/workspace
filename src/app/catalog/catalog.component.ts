@@ -8,20 +8,23 @@ import {Category} from '../model/category';
   templateUrl: './catalog.component.html',
   styleUrls: ['./catalog.component.css']
 })
-export class CatalogComponent implements OnInit {
 
+export class CatalogComponent implements OnInit {
+  category: string = 'all';
+    filterByCategory(c:string) : boolean {
+      return this.category === 'all' || c === this.category;
+  }
   readonly categories: Category [] = Category.categories;
   readonly catalog: CardTemplate[] = CardTemplate.catalog;
   constructor(private route: ActivatedRoute) {
   }
 
-  ngOnInit() {
+  ngOnInit()
+{
     this.route.paramMap
       .subscribe(params => {
-
-
+        this.category = params.get('category');
       });
   }
-
 }
 
