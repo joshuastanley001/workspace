@@ -9,6 +9,7 @@ import { CatalogComponent } from './catalog/catalog.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import {AppRoutingModule} from './app-routing.module';
 import { LandingComponent } from './landing/landing.component';
+import { CreateComponent } from './create/create.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { LandingComponent } from './landing/landing.component';
     AppComponent,
     CatalogComponent,
     NavbarComponent,
-    LandingComponent
+    LandingComponent,
+    CreateComponent
   ],
   imports: [
     AppRoutingModule,

@@ -1,14 +1,17 @@
-<div class="container">
+<div class="container mt-5">
   <div class="row">
-    <div class="col-sm-auto"></div>
-    <div class="btn-group-vertical">
-      <button type="button" class="btn btn-secondary" routerLink="/catalog/{{category.id}}" *ngFor="let category of categories">{{category.title}}</button>
+    <div class="col-sm-auto">
+      <div class="btn-group-vertical">
+        <button type="button" class="btn btn-secondary" routerLink="/catalog/{{category.id}}"
+                *ngFor="let category of categories">{{category.title}}
+        </button>
+      </div>
     </div>
     <div class="col">
       <div class="row">
         <ng-container *ngFor="let template of catalog">
           <div class="card mb-4" *ngIf="filterByCategory(template.category)">
-            <div class="card-body">
+            <div class="card-body" routerLink="/catalog/template/{{template.id}}">
               <img class="card-thumbnail" src="{{template.url}}" width='133px' height='200px'
                    alt="Card image cap">
               <h5 class="card-title">{{template.title}}</h5>
